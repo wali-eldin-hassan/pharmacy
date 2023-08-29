@@ -1,0 +1,80 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+@page {
+    /* dimensions for the whole page */
+    size: A5;
+    
+    margin: 0;
+}
+@media print { body { -webkit-print-color-adjust: exact; } #tablePanel2{
+    color: white !important;
+}}
+
+#print {
+
+      font-family: 'Roboto Slab', serif;
+              /* A5 dimensions */
+    height: 210mm;
+    width: 148.5mm;
+    font-size: 10px;
+    background-color:
+    rgba(251, 251, 251, 0.72) !important ; 
+    padding: 10px;
+}
+
+
+#print #logo  h1 {
+    line-height: 1.15em;
+    font-weight: 300;
+    font-size: 14px;
+    color: #00BCD4 !important;
+}
+#print #logo {
+    text-align: center;
+}
+#print #address {
+    float:left;
+    position: relative;
+    top: -55px;
+    line-height: 0.6;
+}
+#print #invoice{
+    float:right;    
+    position: relative;
+    top: -60px;
+    line-height: 0.6;
+}
+#print table {
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    top: -40px;
+    background-color: #3498db !important;
+}
+
+#print th {
+    padding: 8px;
+    text-align: left;
+    color:white !important;
+}
+#print td {
+    padding:5px;
+        word-break: break-all;
+}
+#print #tdInfo {
+    word-break: break-word;
+}
+#print #tablePanel{
+    background-color: #ffffff !important;
+    color: black !important;
+}
+
+#print #totalAmount {
+   display: inline-block;
+}
+#print .barcode {
+
+    float: right;
+}

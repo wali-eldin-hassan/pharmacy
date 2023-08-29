@@ -1,0 +1,64 @@
+@page {
+    /* dimensions for the whole page */
+    size: A5;
+    
+    margin: 0;
+}
+
+#print {
+
+    height: 210mm;
+    width: 148.5mm;
+    font-size: 10px;
+    padding: 10px;
+}
+
+
+#print #logo  h1 {
+    line-height: 1.15em;
+    font-weight: 300;
+    font-size: 14px;
+}
+#print #logo {
+    text-align: center;
+}
+#print #address {
+    float:left;
+    position: relative;
+    top: -55px;
+    line-height: 0.6;
+}
+#print #invoice{
+    float:right;    
+    position: relative;
+    top: -60px;
+    line-height: 0.6;
+}
+#print table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#print table {
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    top: -40px;
+}
+
+#print th, td {
+    padding: 5px;
+        word-break: break-all;
+}
+#print #tdInfo {
+    word-break: break-word;
+}
+
+#print #totalAmount {
+   display: inline-block;
+}
+#print .barcode {
+
+    float: right;
+}
+

@@ -1,0 +1,30 @@
+{
+  "en": {
+    "name": "Name",
+    "password": "password",
+    "email": "E-mail",
+    "superadmin": "Super admin",
+    "admin": "Administrator ",
+    "permission": "Permission",
+    "created_at": "Create at",
+    "updated_at": "Update at",
+    "control": "Control",
+    "add": "Add new account",
+    "edit": "Edit to ",
+    "create": "Create new account"
+  },
+  "ar": {
+    "name": "اسم",
+    "password": "كلمه السر",
+    "email": "بريد إلكتروني",
+    "superadmin": "مشرف متميز",
+    "admin": "مدير ",
+    "permission": "الإذن",
+    "created_at": "أنشئ في",
+    "updated_at": "التحديث في",
+    "control": "يتحكم",
+    "add": "إضافة حساب جديد",
+    "edit": "تحرير إلى ",
+    "create": "انشاء حساب جديد"
+  }
+}
