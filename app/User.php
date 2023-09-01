@@ -2,9 +2,10 @@
 
 namespace App;
 
+use App\Models\Role;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Role;
+use function App\abort;
 
 class User extends Authenticatable
 {
@@ -31,7 +32,7 @@ class User extends Authenticatable
     public function roles()
     {
         return $this
-            ->belongsToMany('App\Roles')
+            ->belongsToMany('App\Modules\Roles')
             ->withTimestamps();
     }
     public function authorizeRoles($roles)

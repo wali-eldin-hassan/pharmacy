@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Suppliers;
+use App\Models\Suppliers;
 use Illuminate\Http\Request;
 
 class SuppliersController extends Controller

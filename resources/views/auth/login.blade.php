@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} ">
                         <label for="email" class="control-label">@lang('login.email')</label>
-                        <input id="email" type="email" class="form-control" name="email" value="laurus@ph.net"
+                        <input id="email" type="email" class="form-control" name="email" value="admin@demo.com"
                             required>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} ">
                         <label for="password" class="control-label">@lang('login.password')</label>
 
-                        <input id="password" type="password" class="form-control" name="password" value="laurus"
+                        <input id="password" type="password" class="form-control" name="password" value="123123"
                             required>
 
                         @if ($errors->has('password'))

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Categories;
-use App\Products;
-use App\Suppliers;
+use App\Models\Categories;
+use App\Models\Products;
+use App\Models\Suppliers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PDF;

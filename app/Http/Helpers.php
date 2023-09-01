@@ -15,7 +15,7 @@ function set_active($path, $active = 'active')
 
 function get_setting()
 {
-    $setting = \App\Settings::all()->first();
+    $setting = \App\Models\Settings::all()->first();
 
     if ($setting !== null) {
         return $setting;

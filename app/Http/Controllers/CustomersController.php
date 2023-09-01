@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Customers;
-use App\Custorders;
-use App\Lastcs;
+use App\Models\Customers;
+use App\Models\Custorders;
+use App\Models\Lastcs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PDF;

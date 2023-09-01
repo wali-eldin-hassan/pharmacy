@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Orders;
-use App\Sales;
+use App\Models\Orders;
+use App\Models\Sales;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use PDF;
 
@@ -12,7 +13,7 @@ class SalesController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
      */
 
     public function index()
@@ -34,13 +35,13 @@ class SalesController extends Controller
             ->orderBy('orders.id', 'desc')
             ->paginate(40);
 
-        return view('sales.index', ['sales' => $sales, 'print' => $print]);
+        return view(view: 'sales.index', data: ['sales' => $sales, 'print' => $print]);
     }
 
     /**
      * Show the form for sale a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -53,8 +54,8 @@ class SalesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -105,7 +106,7 @@ class SalesController extends Controller
      * Display the specified resource.
      *
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -121,7 +122,7 @@ class SalesController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Request $request, $id)
     {
@@ -139,8 +140,8 @@ class SalesController extends Controller
     /**
      * Search the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response Json
+     * @param Request $request
+     * @return Response Json
      */
 
     public function search(Request $request)
@@ -164,7 +165,7 @@ class SalesController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
 
     public function pdf($id)

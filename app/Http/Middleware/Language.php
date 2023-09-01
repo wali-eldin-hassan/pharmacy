@@ -22,7 +22,7 @@ class Language
         try {
             DB::connection()->getPdo();
             if (DB::connection()->getDatabaseName()) {
-                $language = \App\Settings::all()->last();
+                $language = \App\Models\Settings::all()->last();
                 if (is_null($language)) {
                     App::setLocale('en');
                     return $next($request);

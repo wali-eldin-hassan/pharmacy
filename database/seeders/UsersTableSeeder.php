@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Database\Seeder;
+namespace Database\Seeders;
+
 use App\User;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
@@ -13,9 +16,9 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'laurus',
-            'email' => 'laurus@ph.net',
-            'password' => bcrypt('laurus'),
+            'name' => 'Demo Admin',
+            'email' => 'admin@demo.com',
+            'password' => bcrypt('123123'),
         ]);
         DB::table('roles_user')->insert([
             'roles_id' => '1',
